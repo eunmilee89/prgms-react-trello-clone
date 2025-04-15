@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import { GrSubtract } from 'react-icons/gr';
 import Task from '../Task/Task';
 import ActionButton from '../ActionButton/ActionButton';
@@ -65,7 +65,6 @@ const List: FC<TListProps> = ({ list, boardId }) => {
               <Task
                 taskName={task.taskName}
                 taskDescription={task.taskDescription}
-                boardId={boardId}
                 id={task.taskId}
                 index={index}
               />

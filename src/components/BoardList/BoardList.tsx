@@ -97,7 +97,7 @@ const BoardList: React.FC<TBoardListProps> = ({
       ))}
       <div className={addSection}>
         {isFormOpen ? (
-          <SideForm inputRef={inputRef} setIsFormOpen={setIsFormOpen} />
+          <SideForm setIsFormOpen={setIsFormOpen} />
         ) : (
           <FiPlusCircle className={addButton} onClick={handleClick} />
         )}
