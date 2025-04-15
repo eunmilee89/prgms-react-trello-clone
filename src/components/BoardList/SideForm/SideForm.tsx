@@ -7,11 +7,10 @@ import { v4 as uuidv4 } from 'uuid';
 import { addLog } from '../../../store/slices/loggerSlice';
 
 type TSideFormProps = {
-  inputRef: React.RefObject<HTMLInputElement>;
   setIsFormOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const SideForm: FC<TSideFormProps> = ({ setIsFormOpen, inputRef }) => {
+const SideForm: FC<TSideFormProps> = ({ setIsFormOpen }) => {
   const [inputText, setInputText] = useState('');
   const dispatch = useTypedDispatch();
 
@@ -49,7 +48,6 @@ const SideForm: FC<TSideFormProps> = ({ setIsFormOpen, inputRef }) => {
   return (
     <div className={sideForm}>
       <input
-        // ref={inputRef}
         autoFocus
         className={input}
         type='text'
